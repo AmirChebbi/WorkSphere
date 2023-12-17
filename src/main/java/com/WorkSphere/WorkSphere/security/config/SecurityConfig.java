@@ -55,6 +55,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/v1/submission/**").permitAll()
                 .requestMatchers("/api/v1/tasks/**").permitAll()
 
+
                 .anyRequest().authenticated()
                 .and()
                 .sessionManagement()
