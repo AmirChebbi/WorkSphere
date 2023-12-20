@@ -1,7 +1,8 @@
 package com.WorkSphere.WorkSphere.security.utility;
 
-import com.ecommerce.ecommerce.exceptions.ResourceNotFoundException;
-import com.ecommerce.ecommerce.repository.UserEntityRepository;
+
+import com.WorkSphere.WorkSphere.Exceptions.ResourceNotFoundException;
+import com.WorkSphere.WorkSphere.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -11,15 +12,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class CustomUserDetailsService  implements UserDetailsService {
 
-    private final UserEntityRepository userEntityRepository;
+    private final UserRepository userRepository;
 
     @Autowired
-    public CustomUserDetailsService(UserEntityRepository userEntityRepository) {
-        this.userEntityRepository = userEntityRepository;
+    public CustomUserDetailsService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        return userEntityRepository.fetchUserWithEmail(email).orElseThrow(() -> new ResourceNotFoundException("The email address provided could not be found in our system."));
+        return userRepository.fetchUserWithEmail(email).orElseThrow(() -> new ResourceNotFoundException("The email address provided could not be found in our system."));
     }
 }
