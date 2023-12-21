@@ -4,12 +4,13 @@ import com.WorkSphere.WorkSphere.DAOs.Feedback.FeedBack;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.awt.print.Pageable;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
-
+@Repository
 public interface FeedBackRepository extends JpaRepository<FeedBack, Long> {
     @Query("SELECT f from FeedBack f where f.sender.id = :id ")
     List<FeedBack> findFeedBackBySender(@Param("id")UUID id);

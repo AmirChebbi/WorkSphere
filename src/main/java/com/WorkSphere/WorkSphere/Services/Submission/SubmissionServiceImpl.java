@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
+import org.springframework.data.domain.Pageable;
 import java.util.List;
 import java.util.UUID;
 
@@ -60,7 +60,8 @@ public class SubmissionServiceImpl implements SubmissionService{
 
     @Override
     public ResponseEntity<Object> getSubmissionsByUser(UUID userId, long pageNumber) {
-        final Pageable pageable = (Pageable) PageRequest.of((int) pageNumber -1, 10);
+        int adjustedPageNumber = (int) Math.max(pageNumber,1);
+        final Pageable pageable = (Pageable) PageRequest.of( adjustedPageNumber -1, 10);
         final List<SubmissionDTO> submissionDTOS = submissionRepository.getSubmissionsByUserId(userId, pageable).stream().map(submissionDTOMapper).toList();
         if (submissionDTOS.isEmpty() && pageNumber<1){
             getSubmissionsByUser(userId, 1);
