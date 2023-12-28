@@ -8,6 +8,7 @@ import com.WorkSphere.WorkSphere.responses.ResponseHandler;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import org.springframework.data.domain.Pageable;
@@ -25,8 +26,8 @@ public class QuestionServiceImpl implements QuestionService{
     }
 
     @Override
-    public void addQuestion(Question question) {
-        questionRepository.save(question);
+    public void addQuestion(QuestionDTO questionDTO, UserDetails userDetails) {
+        questionRepository.save(questionDTOMapper.reverse(questionDTO, userDetails));
     }
 
     @Override

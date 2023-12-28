@@ -1,9 +1,10 @@
 package com.WorkSphere.WorkSphere.Controllers.Qusetion;
 
-import com.WorkSphere.WorkSphere.DAOs.Qusetion.Question;
+import com.WorkSphere.WorkSphere.DTOs.Question.QuestionDTO;
 import com.WorkSphere.WorkSphere.Services.Qusetion.QuestionService;
-import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -19,8 +20,8 @@ public class QuestionController {
     }
 
     @PostMapping("/add")
-    public void addQuestion(@RequestBody Question question) {
-        questionService.addQuestion(question);
+    public void addQuestion(@RequestBody QuestionDTO question,@AuthenticationPrincipal UserDetails userDetails) {
+        questionService.addQuestion(question, userDetails);
     }
 
     @GetMapping("/getByUser/{userId}")
