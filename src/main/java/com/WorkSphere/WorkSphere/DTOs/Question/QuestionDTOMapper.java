@@ -1,7 +1,6 @@
 package com.WorkSphere.WorkSphere.DTOs.Question;
 
 import com.WorkSphere.WorkSphere.DAOs.Qusetion.Question;
-import com.WorkSphere.WorkSphere.DAOs.UserEntity.UserEntity;
 import com.WorkSphere.WorkSphere.Services.UserEntity.UserService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;

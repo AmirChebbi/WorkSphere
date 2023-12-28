@@ -1,7 +1,5 @@
 package com.WorkSphere.WorkSphere.Controllers.auth;
 
-
-
 import com.WorkSphere.WorkSphere.DTOs.auth.LoginDTO;
 import com.WorkSphere.WorkSphere.DTOs.auth.RegisterDTO;
 import com.WorkSphere.WorkSphere.Services.auth.AuthService;

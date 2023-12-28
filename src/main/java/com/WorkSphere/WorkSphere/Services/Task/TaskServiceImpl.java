@@ -1,6 +1,5 @@
 package com.WorkSphere.WorkSphere.Services.Task;
 
-import com.WorkSphere.WorkSphere.DAOs.Task.Task;
 import com.WorkSphere.WorkSphere.DTOs.Task.TaskDTO;
 import com.WorkSphere.WorkSphere.DTOs.Task.TaskDTOMapper;
 import com.WorkSphere.WorkSphere.Exceptions.ResourceNotFoundException;
@@ -10,6 +9,7 @@ import com.WorkSphere.WorkSphere.responses.ResponseHandler;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.awt.print.Pageable;
@@ -28,8 +28,8 @@ public class TaskServiceImpl implements TaskService{
     }
 
     @Override
-    public ResponseEntity<Object> addTask(Task task) {
-        taskRepository.save(task);
+    public ResponseEntity<Object> addTask(TaskDTO taskDTO, UserDetails userDetails) {
+        taskRepository.save(taskDTOMapper.reverse(taskDTO, userDetails));
         final String successResponse = String.format("This task has been added successfully !");
         return ResponseHandler.generateResponse(successResponse, HttpStatus.OK);
     }

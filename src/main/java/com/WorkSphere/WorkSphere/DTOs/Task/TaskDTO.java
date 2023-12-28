@@ -8,7 +8,8 @@ public record TaskDTO(
         long id,
         String name,
         String description,
-        String doer,
+        String doerName,
+        String doerEmail,
         Date submissionDeadline,
         boolean isSubmitted
 ) {

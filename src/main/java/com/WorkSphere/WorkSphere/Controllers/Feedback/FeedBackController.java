@@ -1,10 +1,11 @@
 package com.WorkSphere.WorkSphere.Controllers.Feedback;
 
-import com.WorkSphere.WorkSphere.DAOs.Feedback.FeedBack;
 import com.WorkSphere.WorkSphere.DTOs.Feedback.FeedBackDTO;
 import com.WorkSphere.WorkSphere.Services.Feedback.FeedBackService;
 import org.springframework.http.ResponseEntity;
 
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -19,8 +20,8 @@ public class FeedBackController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Object> addFeedback(@RequestBody FeedBackDTO feedBack){
-        return feedBackService.addFeedback(feedBack);
+    public ResponseEntity<Object> addFeedback(@RequestBody FeedBackDTO feedBack, @AuthenticationPrincipal UserDetails userDetails){
+        return feedBackService.addFeedback(feedBack, userDetails);
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Object> deleteFeedBack(@PathVariable long id){

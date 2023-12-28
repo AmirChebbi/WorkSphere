@@ -11,6 +11,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,8 +31,8 @@ public class FeedBackServiceImpl implements FeedBackService{
     }
 
     @Override
-    public ResponseEntity<Object> addFeedback(FeedBackDTO feedBack) {
-        feedBackRepository.save(new FeedBack(userService.getUserEntityByEmail(feedBack.senderEmail()),feedBack.message()));
+    public ResponseEntity<Object> addFeedback(FeedBackDTO feedBack, UserDetails userDetails) {
+        feedBackRepository.save(new FeedBack(userService.getUserEntityByEmail(userDetails.getUsername()),feedBack.message()));
         final String successResponse = String.format("Your FeedBack was sent successfully ");
         return ResponseHandler.generateResponse(successResponse, HttpStatus.OK);
     }

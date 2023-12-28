@@ -4,6 +4,8 @@ import com.WorkSphere.WorkSphere.DAOs.Task.Task;
 import com.WorkSphere.WorkSphere.DTOs.Task.TaskDTO;
 import com.WorkSphere.WorkSphere.Services.Task.TaskService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -19,8 +21,8 @@ public class TasksController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Object> addTask(@RequestBody Task task){
-        return taskService.addTask(task);
+    public ResponseEntity<Object> addTask(@RequestBody TaskDTO task, @AuthenticationPrincipal UserDetails userDetails){
+        return taskService.addTask(task, userDetails);
     }
 
     @DeleteMapping("/delete/{id}")
