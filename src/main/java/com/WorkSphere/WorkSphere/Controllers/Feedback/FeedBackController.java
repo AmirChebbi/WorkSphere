@@ -19,7 +19,7 @@ public class FeedBackController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Object> addFeedback(@RequestBody FeedBack feedBack){
+    public ResponseEntity<Object> addFeedback(@RequestBody FeedBackDTO feedBack){
         return feedBackService.addFeedback(feedBack);
     }
     @DeleteMapping("/delete/{id}")
@@ -39,7 +39,7 @@ public class FeedBackController {
         return feedBackService.getAllFeedBacks(pageNumber);
     }
     @PutMapping("/update/{id}")
-    public ResponseEntity<Object> updateFeedBack(@PathVariable long id, @RequestBody FeedBack feedBack){
+    public ResponseEntity<Object> updateFeedBack(@PathVariable long id, @RequestBody FeedBackDTO feedBack){
         return feedBackService.updateFeedBack(id, feedBack);
     }
 

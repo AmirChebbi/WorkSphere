@@ -5,6 +5,7 @@ import com.WorkSphere.WorkSphere.DTOs.Feedback.FeedBackDTO;
 import com.WorkSphere.WorkSphere.DTOs.Feedback.FeedBackDTOMapper;
 import com.WorkSphere.WorkSphere.Exceptions.ResourceNotFoundException;
 import com.WorkSphere.WorkSphere.Repositories.FeedBackRepository;
+import com.WorkSphere.WorkSphere.Services.UserEntity.UserService;
 import com.WorkSphere.WorkSphere.responses.ResponseHandler;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -19,16 +20,18 @@ import java.util.UUID;
 public class FeedBackServiceImpl implements FeedBackService{
 
     private final FeedBackRepository feedBackRepository;
+    private final UserService userService;
     private final FeedBackDTOMapper feedBackDTOMapper;
 
-    public FeedBackServiceImpl(FeedBackRepository feedBackRepository, FeedBackDTOMapper feedBackDTOMapper) {
+    public FeedBackServiceImpl(FeedBackRepository feedBackRepository, UserService userService, FeedBackDTOMapper feedBackDTOMapper) {
         this.feedBackRepository = feedBackRepository;
+        this.userService = userService;
         this.feedBackDTOMapper = feedBackDTOMapper;
     }
 
     @Override
-    public ResponseEntity<Object> addFeedback(FeedBack feedBack) {
-        feedBackRepository.save(feedBack);
+    public ResponseEntity<Object> addFeedback(FeedBackDTO feedBack) {
+        feedBackRepository.save(new FeedBack(userService.getUserEntityByEmail(feedBack.senderEmail()),feedBack.message()));
         final String successResponse = String.format("Your FeedBack was sent successfully ");
         return ResponseHandler.generateResponse(successResponse, HttpStatus.OK);
     }
@@ -73,11 +76,15 @@ public class FeedBackServiceImpl implements FeedBackService{
     }
 
     @Override
-    public ResponseEntity<Object> updateFeedBack(long id, FeedBack feedBack) {
-        FeedBack feedBackChecking = feedBackRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("This feedback doesn't exist in our system") );
-        feedBack.setId(id);
-        feedBackRepository.save(feedBack);
-        final String successResponse = String.format("Your FeedBack was updated successfully !");
-        return ResponseHandler.generateResponse(successResponse, HttpStatus.OK);
+    public ResponseEntity<Object> updateFeedBack(long id, FeedBackDTO feedBackDTO) {
+        if (feedBackRepository.existsById(id)) {
+            FeedBack feedBack = feedBackDTOMapper.reverse(feedBackDTO);
+            feedBack.setId(id);
+            feedBackRepository.save(feedBack);
+            final String successResponse = String.format("Your FeedBack was updated successfully !");
+            return ResponseHandler.generateResponse(successResponse, HttpStatus.OK);
+        } else {
+            throw new ResourceNotFoundException("This feedback doesn't exist in our system !!");
+        }
     }
 }

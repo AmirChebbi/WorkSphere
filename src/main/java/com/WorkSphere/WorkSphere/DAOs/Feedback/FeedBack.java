@@ -29,4 +29,8 @@ public class FeedBack {
 
     private String message;
 
+    public FeedBack(UserEntity sender, String message) {
+        this.sender = sender;
+        this.message = message;
+    }
 }
