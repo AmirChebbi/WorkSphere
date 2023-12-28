@@ -31,10 +31,12 @@ public class Task {
 
     private String description;
 
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "doer_email", referencedColumnName = "email")
     private UserEntity doer;
 
     private Date submissionDeadline;
 
     private boolean isSubmitted = false;
+
 }

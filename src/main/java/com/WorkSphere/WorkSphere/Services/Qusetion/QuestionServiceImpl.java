@@ -1,8 +1,8 @@
 package com.WorkSphere.WorkSphere.Services.Qusetion;
 
 import com.WorkSphere.WorkSphere.DAOs.Qusetion.Question;
-import com.WorkSphere.WorkSphere.DTOs.Qusetion.QuestionDTO;
-import com.WorkSphere.WorkSphere.DTOs.Qusetion.QuestionDTOMapper;
+import com.WorkSphere.WorkSphere.DTOs.Question.QuestionDTO;
+import com.WorkSphere.WorkSphere.DTOs.Question.QuestionDTOMapper;
 import com.WorkSphere.WorkSphere.Repositories.QuestionRepository;
 import com.WorkSphere.WorkSphere.responses.ResponseHandler;
 import org.springframework.data.domain.PageRequest;

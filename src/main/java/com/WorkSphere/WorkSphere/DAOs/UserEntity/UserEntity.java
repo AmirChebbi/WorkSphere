@@ -40,7 +40,7 @@ public class UserEntity implements UserDetails {
     @Column(name = "lastname" ,nullable = false)
     private String lastName;
 
-    @Column(name = "email" ,nullable = false)
+    @Column(name = "email" ,nullable = false, unique = true)
     private String email;
 
     @Column(name = "phone_number", unique = true , nullable = false)
@@ -59,7 +59,7 @@ public class UserEntity implements UserDetails {
     private boolean isEnabled = false;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "role_id")
+    @JoinColumn(name = "role_name",referencedColumnName = "name")
     private Role role;
 
 
@@ -97,4 +97,5 @@ public class UserEntity implements UserDetails {
     public boolean isEnabled() {
         return false;
     }
+
 }

@@ -1,16 +1,13 @@
 package com.WorkSphere.WorkSphere.DAOs.Submission;
 
-import com.WorkSphere.WorkSphere.DAOs.Performance.Performance;
 import com.WorkSphere.WorkSphere.DAOs.Task.Task;
-import com.WorkSphere.WorkSphere.Exceptions.BadRequestException;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.Objects;
-import java.util.UUID;
+
 
 
 @NoArgsConstructor

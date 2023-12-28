@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.DTOs.Qusetion;
+package com.WorkSphere.WorkSphere.DTOs.Question;
 
 import com.WorkSphere.WorkSphere.DAOs.Qusetion.Question;
 import org.springframework.stereotype.Service;

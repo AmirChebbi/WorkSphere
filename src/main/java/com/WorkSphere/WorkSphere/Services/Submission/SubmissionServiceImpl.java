@@ -1,12 +1,13 @@
 package com.WorkSphere.WorkSphere.Services.Submission;
 
 import com.WorkSphere.WorkSphere.DAOs.Submission.Submission;
+import com.WorkSphere.WorkSphere.DAOs.Task.Task;
 import com.WorkSphere.WorkSphere.DTOs.Submission.SubmissionDTO;
 import com.WorkSphere.WorkSphere.DTOs.Submission.SubmissionDTOMapper;
 import com.WorkSphere.WorkSphere.DTOs.Submission.SubmissionPreEval;
-import com.WorkSphere.WorkSphere.Exceptions.BadRequestException;
 import com.WorkSphere.WorkSphere.Exceptions.ResourceNotFoundException;
 import com.WorkSphere.WorkSphere.Repositories.SubmissionRepository;
+import com.WorkSphere.WorkSphere.Repositories.TaskRepository;
 import com.WorkSphere.WorkSphere.responses.ResponseHandler;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
@@ -22,10 +23,12 @@ public class SubmissionServiceImpl implements SubmissionService{
 
     private final SubmissionRepository submissionRepository;
     private final SubmissionDTOMapper submissionDTOMapper;
+    private final TaskRepository taskRepository;
 
-    public SubmissionServiceImpl(SubmissionRepository submissionRepository, SubmissionDTOMapper submissionDTOMapper) {
+    public SubmissionServiceImpl(SubmissionRepository submissionRepository, SubmissionDTOMapper submissionDTOMapper, TaskRepository taskRepository) {
         this.submissionRepository = submissionRepository;
         this.submissionDTOMapper = submissionDTOMapper;
+        this.taskRepository = taskRepository;
     }
 
     @Override
@@ -35,6 +38,9 @@ public class SubmissionServiceImpl implements SubmissionService{
                 submission.task(),
                 submission.submissionDate()
         ));
+        Task task =taskRepository.findById(submission.task().getId()).orElseThrow( () -> new ResourceNotFoundException("We had trouble finding the task"));
+        task.setSubmitted(true);
+        taskRepository.save(task);
         final String successMessage = String.format("Your Submission was saved successfully");
         return ResponseHandler.generateResponse(successMessage, HttpStatus.OK);
     }

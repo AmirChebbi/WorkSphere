@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.DTOs.Qusetion;
+package com.WorkSphere.WorkSphere.DTOs.Question;
 
 public record QuestionDTO(
         long id,
