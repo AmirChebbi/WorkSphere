@@ -12,7 +12,6 @@ import java.util.Map;
 
 public class ResponseHandler {
 
-
     public static ResponseEntity<Object> generateResponse(Object responseObj, HttpStatus status)
     {
         Map<String , Object> map = new HashMap<>();
