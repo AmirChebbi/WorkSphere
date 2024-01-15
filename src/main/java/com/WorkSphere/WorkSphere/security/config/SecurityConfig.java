@@ -43,6 +43,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                //frontend not ready so, everything is permitted.
 
                 .exceptionHandling()
                 .authenticationEntryPoint(authEntryPoint)
