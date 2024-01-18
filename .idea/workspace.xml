@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7e0c2a20-67f3-468a-b9e7-819a3cbc8ca7" name="Changes" comment="no big deal">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/auth/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/DAOs/Role/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/DAOs/Role/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/DAOs/UserEntity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/DAOs/UserEntity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/DAOs/token/RefreshToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/DAOs/token/RefreshToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/DTOs/auth/RegisterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/DTOs/auth/RegisterDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/PerformanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/PerformanceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Performance/PerformanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Performance/PerformanceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Task/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Task/TaskServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/auth/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/auth/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/role/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/role/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2Zdi7ne1CjMZ0hOMOUcs0r4WwfW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/lenovo/Desktop/Spring Projects/EstatesFlow",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "spring.configuration.checksum": "7c1f16350e3ee35f75eba8697cc1634f",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ],
+    "DatabaseDriversLRU": [
+      "oracle",
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lenovo\Desktop\Spring Projects\WorkSphere\src\main\resources" />
+      <recent name="C:\Users\lenovo\Desktop\VS Code\Hackathons\WorkSphere\src\main\java\com\WorkSphere\WorkSphere\Services" />
+      <recent name="C:\Users\lenovo\Desktop\VS Code\Hackathons\WorkSphere\src\main\java\com\WorkSphere\WorkSphere\Repositories" />
+      <recent name="C:\Users\lenovo\Desktop\VS Code\Hackathons\WorkSphere\src\main\java\com\WorkSphere\WorkSphere\DAOs" />
+      <recent name="C:\Users\lenovo\Desktop\VS Code\Hackathons\WorkSphere\src\main\java\com\WorkSphere\WorkSphere\Controllers" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.WorkSphere.WorkSphere.DTOs.UserEntity" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
+      <option name="appName" />
+      <option name="appServicePlanName" />
+      <option name="appServicePlanResourceGroup" />
+      <option name="appSettingsKey" value="847ae442-835b-4119-a55f-93954291b3af" />
+      <option name="artifact" />
+      <option name="debugOptions" />
+      <option name="deployment" />
+      <option name="deploymentStagingDirectoryPath" />
+      <option name="funcPath" />
+      <option name="functionHostArguments" />
+      <option name="hostJsonPath" />
+      <option name="insightsName" />
+      <option name="instrumentationKey" />
+      <option name="javaVersion" />
+      <option name="localSettingsJsonPath" />
+      <option name="moduleName" />
+      <option name="os" />
+      <option name="pricingTier" />
+      <option name="providerMap">
+        <map />
+      </option>
+      <option name="region" />
+      <option name="resourceGroup" />
+      <option name="stagingFolder" />
+      <option name="subscription" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorkSphereApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="WorkSphere" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.WorkSphere.WorkSphere.WorkSphereApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e0c2a20-67f3-468a-b9e7-819a3cbc8ca7" name="Changes" comment="" />
+      <created>1702758196772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702758196772</updated>
+      <workItem from="1702758198854" duration="41000" />
+      <workItem from="1702758246860" duration="28000" />
+      <workItem from="1702758289514" duration="542000" />
+      <workItem from="1702758874717" duration="20575000" />
+      <workItem from="1702782584419" duration="15539000" />
+      <workItem from="1702798466857" duration="25000" />
+      <workItem from="1702798793659" duration="62000" />
+      <workItem from="1702803391550" duration="137000" />
+      <workItem from="1702803635541" duration="841000" />
+      <workItem from="1702813223463" duration="55000" />
+      <workItem from="1702845106082" duration="619000" />
+      <workItem from="1703078487604" duration="5510000" />
+      <workItem from="1703171308518" duration="443000" />
+      <workItem from="1703681541039" duration="970000" />
+      <workItem from="1703762864533" duration="5277000" />
+      <workItem from="1703777683087" duration="12140000" />
+      <workItem from="1703852426896" duration="1839000" />
+      <workItem from="1703854309553" duration="46000" />
+      <workItem from="1703872090760" duration="4268000" />
+      <workItem from="1703941995014" duration="106000" />
+      <workItem from="1704139167532" duration="342000" />
+      <workItem from="1704291126640" duration="128000" />
+      <workItem from="1704303599685" duration="988000" />
+      <workItem from="1704358243923" duration="1466000" />
+      <workItem from="1704446086403" duration="97000" />
+      <workItem from="1704460149852" duration="782000" />
+      <workItem from="1704477055244" duration="14000" />
+      <workItem from="1704717035897" duration="194000" />
+      <workItem from="1704717320876" duration="560000" />
+      <workItem from="1705232561633" duration="1905000" />
+      <workItem from="1705239314383" duration="801000" />
+      <workItem from="1705241167763" duration="4324000" />
+      <workItem from="1705319046403" duration="3752000" />
+      <workItem from="1705423578281" duration="2021000" />
+      <workItem from="1705425873101" duration="11000" />
+      <workItem from="1705519578731" duration="600000" />
+      <workItem from="1705520909940" duration="1496000" />
+      <workItem from="1705577717285" duration="1555000" />
+      <workItem from="1705589041758" duration="5674000" />
+    </task>
+    <task id="LOCAL-00001" summary="fixed the filterchain">
+      <created>1702803496417</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702803496417</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fixed the filterchain">
+      <created>1702803906672</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702803906672</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed the filterchain">
+      <created>1703078710586</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703078710586</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed a bug in the repositories">
+      <created>1703171442536</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703171442536</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed a data transfer issue">
+      <created>1703767731508</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703767731508</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Decreased Work on the frontend">
+      <created>1703779829232</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703779829233</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Decreased Work on the frontend">
+      <created>1703789970854</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703789970854</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Forcing the saving of DTOs only with the extraction of the current User by his UserDetails on the active Session.">
+      <created>1703793292312</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703793292312</updated>
+    </task>
+    <task id="LOCAL-00009" summary="no big deal">
+      <created>1705331287813</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705331287813</updated>
+    </task>
+    <task id="LOCAL-00010" summary="no big deal">
+      <created>1705331435293</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705331435293</updated>
+    </task>
+    <task id="LOCAL-00011" summary="no big deal">
+      <created>1705519713816</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705519713816</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="fixed the filterchain" />
+    <MESSAGE value="Fixed a bug in the repositories" />
+    <MESSAGE value="Fixed a data transfer issue" />
+    <MESSAGE value="Decreased Work on the frontend" />
+    <MESSAGE value="Forcing the saving of DTOs only with the extraction of the current User by his UserDetails on the active Session." />
+    <MESSAGE value="no big deal" />
+    <option name="LAST_COMMIT_MESSAGE" value="no big deal" />
+  </component>
+</project>
