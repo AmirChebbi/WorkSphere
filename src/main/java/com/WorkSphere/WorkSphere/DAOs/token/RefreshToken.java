@@ -1,7 +1,5 @@
 package com.WorkSphere.WorkSphere.DAOs.token;
 
-
-
 import com.WorkSphere.WorkSphere.DAOs.UserEntity.UserEntity;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -32,7 +30,7 @@ public class RefreshToken {
     private Date issuedAt;
 
     @Column(name = "expires_at", nullable = false)
-    private  Date expiresAt;
+    private Date expiresAt;
 
     @Column(name = "expired",nullable = false)
     private boolean expired;

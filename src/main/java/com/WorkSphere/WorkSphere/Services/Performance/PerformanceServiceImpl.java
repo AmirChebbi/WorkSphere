@@ -8,11 +8,11 @@ import com.WorkSphere.WorkSphere.Repositories.PerformanceRepository;
 import com.WorkSphere.WorkSphere.Repositories.SubmissionRepository;
 import com.WorkSphere.WorkSphere.responses.ResponseHandler;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
 import java.util.List;
 import java.util.UUID;
 
@@ -40,7 +40,7 @@ public class PerformanceServiceImpl implements PerformanceService {
         for (Performance performance : performances){
             calculateOverAllRating(performance.getUserEntity().getId());
         }
-        return ResponseHandler.generateResponse(performances.stream().map(performanceDTOMapper).toList(), HttpStatus.OK,performances.size(),performanceRepository.getPerformanceCount(pageable));
+        return ResponseHandler.generateResponse(performances.stream().map(performanceDTOMapper).toList(), HttpStatus.OK,performances.size(),performanceRepository.getPerformanceCount());
     }
 
     public void calculateOverAllRating(UUID userId){

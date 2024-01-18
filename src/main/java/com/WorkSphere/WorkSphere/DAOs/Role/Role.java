@@ -14,7 +14,6 @@ public class Role {
             sequenceName = "role_sequence",
             allocationSize = 1
     )
-
     @Id
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/v1/auth")
 public class AuthController {
 
-
     private final AuthService authService;
 
     public AuthController(AuthService authService)
@@ -22,10 +21,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<Object> register(@Valid @RequestBody RegisterDTO registerDto)
-    {
-        return authService.register(registerDto);
-    }
+    public ResponseEntity<Object> register(@Valid @RequestBody RegisterDTO registerDto) {return authService.register(registerDto);}
 
     @PostMapping("/login")
     public ResponseEntity<Object>  login(@Valid @RequestBody LoginDTO loginDto)
@@ -44,6 +40,4 @@ public class AuthController {
     {
         return authService.renewAccessToken(refreshToken,expiredToken);
     }
-
-
 }

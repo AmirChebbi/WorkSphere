@@ -18,7 +18,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "users")
+@Table
 public class UserEntity implements UserDetails {
 
     @SequenceGenerator(
@@ -62,6 +62,16 @@ public class UserEntity implements UserDetails {
     @JoinColumn(name = "role_name",referencedColumnName = "name")
     private Role role;
 
+    public UserEntity(String firstName, String lastName, String email, String phoneNumber, String password, Date creationDate, Role role) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.password = password;
+        this.rating = (double) 0;
+        this.creationDate = creationDate;
+        this.role = role;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

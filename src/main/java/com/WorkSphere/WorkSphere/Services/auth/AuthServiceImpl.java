@@ -46,8 +46,6 @@ public class AuthServiceImpl  implements  AuthService{
     private final AuthenticationManager authenticationManager;
     private final JWTService jwtService;
 
-
-
     public AuthServiceImpl(UserService userEntityService, UserDTOMapper userEntityDTOMapper, RoleService roleService, PasswordEncoder passwordEncoder, ConfirmationTokenService confirmationTokenService, RefreshTokenService refreshTokenService, TokenService tokenService, EmailSenderService emailSenderService, AuthenticationManager authenticationManager, JWTService jwtService) {
         this.userEntityService = userEntityService;
         this.userEntityDTOMapper = userEntityDTOMapper;
@@ -70,21 +68,30 @@ public class AuthServiceImpl  implements  AuthService{
         if (userEntityService.isPhoneNumberRegistered(registerDto.getPhoneNumber())) {
             throw new IllegalArgumentException("Sorry, that phone number is already taken. Please choose a different one.");
         }
-        Role role = roleService.fetchRoleByName("CLIENT");
-        UserEntity user = new UserEntity();
+        Role role = roleService.fetchRoleByName("EMPLOYEE");
+        UserEntity user = new UserEntity(
+                registerDto.getFirstName(),
+                registerDto.getLastName(),
+                registerDto.getEmail().toLowerCase(),
+                registerDto.getPhoneNumber(),
+                passwordEncoder.encode(registerDto.getPassword()),
+                new Date(),
+                role
+        );
+        /*
         user.setFirstName(registerDto.getFirstName());
         user.setLastName(registerDto.getLastName());
         user.setEmail(registerDto.getEmail().toLowerCase());
         user.setPhoneNumber(registerDto.getPhoneNumber());
         user.setCreationDate(new Date());
         user.setPassword(passwordEncoder.encode(registerDto.getPassword()));
-        user.setRole(role);
+        user.setRole(role);*/
 
         UserEntity savedUser = userEntityService.saveUser(user);
 
         String confirmationToken = confirmationTokenService.generateConfirmationToken(savedUser);
         String refreshToken = refreshTokenService.generateRefreshToken(savedUser);
-        String link = "http://localhost:8080/api/v1/auth/confirm?token=" + confirmationToken;
+        String link = "http://localhost:8081/api/v1/auth/confirm?token=" + confirmationToken;
         emailSenderService.sendEmail(savedUser.getEmail(),"Confirmation email" , emailSenderService.emailTemplateConfirmation(savedUser.getFirstName(),link));
 
         final RegisterResponseDTO registerResponse = RegisterResponseDTO
@@ -150,7 +157,7 @@ public class AuthServiceImpl  implements  AuthService{
         final Token currentToken = tokenService.getTokenByToken(expiredToken);
         final UserEntity currentUser = currentToken.getUserEntity();
         final RefreshToken currentRefreshToken = refreshTokenService.fetchRefreshTokenByToken(refreshToken);
-        final boolean  isRefreshTokenValid = refreshTokenService.validateRefreshToken(refreshToken);
+        //final boolean isRefreshTokenValid = refreshTokenService.validateRefreshToken(refreshToken);
         if(currentRefreshToken.getUserEntity().getId() != currentUser.getId())
         {
             throw new IllegalStateException("The access token and refresh token u provided are not compatible.");

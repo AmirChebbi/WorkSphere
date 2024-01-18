@@ -45,6 +45,7 @@ public class SecurityConfig {
         http
                 //frontend not ready so, everything is permitted.
 
+                .cors().and().csrf().disable()
                 .exceptionHandling()
                 .authenticationEntryPoint(authEntryPoint)
                 .and()
@@ -55,7 +56,6 @@ public class SecurityConfig {
                 .requestMatchers("/api/v1/question/**").permitAll()
                 .requestMatchers("/api/v1/submission/**").permitAll()
                 .requestMatchers("/api/v1/tasks/**").permitAll()
-
 
                 .anyRequest().authenticated()
                 .and()

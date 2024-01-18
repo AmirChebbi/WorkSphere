@@ -5,17 +5,17 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 public class RegisterDTO {
-    @Size(min = 5 , max = 20, message ="Invalid first name length. Please enter a name with a minimum of 5 characters and a maximum of 20 characters.")
+    @Size(max = 20, message ="Invalid first name length. Please enter a name with a minimum of 5 characters and a maximum of 20 characters.")
     private String firstName;
-    @Size(min = 5 , max = 20, message ="Invalid last name length. Please enter a name with a minimum of 5 characters and a maximum of 20 characters.")
+    @Size(max = 20, message ="Invalid last name length. Please enter a name with a minimum of 5 characters and a maximum of 20 characters.")
     private String lastName;
     @Pattern(regexp = "[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*$", message = "Invalid email address. Please enter a valid email.")
     private String email;
     @NotBlank
     private String phoneNumber;
-    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$",
+    /*/@Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$",
             message = "Invalid password. Passwords must be at least 8 characters long and include at least one uppercase letter, " +
-                    "one lowercase letter, one digit, and one special character.")
+                    "one lowercase letter, one digit, and one special character.")*/
     private String password;
 
     public RegisterDTO(String fistName, String lastName, String email , String phoneNumber  , String password) {
