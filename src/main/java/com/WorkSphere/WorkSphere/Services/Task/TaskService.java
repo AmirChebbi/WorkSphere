@@ -11,6 +11,6 @@ public interface TaskService {
     public ResponseEntity<Object> addTask(Task task);
     public ResponseEntity<Object> removeTask(long id);
     public TaskDTO getTaskById(long id);
-    public ResponseEntity<Object> getAllUserTasks(UUID userId, long pageNumber);
+    public ResponseEntity<Object> getAllUserTasks(String email, long pageNumber);
     public ResponseEntity<Object> getAllNonSubmittedTasks(long pageNumber);
 }

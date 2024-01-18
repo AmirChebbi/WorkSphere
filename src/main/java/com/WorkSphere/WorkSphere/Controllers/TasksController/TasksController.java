@@ -33,9 +33,9 @@ public class TasksController {
         return taskService.getTaskById(id);
     }
 
-    @GetMapping("/getAllByUser/{userId}")
-    public ResponseEntity<Object> getAllUserTasks(@PathVariable UUID userId, @RequestParam long pageNumber){
-        return taskService.getAllUserTasks(userId, pageNumber);
+    @GetMapping("/getAllByUser")
+    public ResponseEntity<Object> getAllUserTasks(@RequestParam String email, @RequestParam long pageNumber){
+        return taskService.getAllUserTasks(email, pageNumber);
     }
 
     @GetMapping("/getNonSubmitted")

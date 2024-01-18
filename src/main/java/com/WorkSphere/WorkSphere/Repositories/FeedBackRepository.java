@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.UUID;
 @Repository
 public interface FeedBackRepository extends JpaRepository<FeedBack, Long> {
-    @Query("SELECT f from FeedBack f where f.sender.id = :id ")
-    List<FeedBack> findFeedBackBySender(@Param("id")UUID id);
+    @Query("SELECT f from FeedBack f where f.sender.email = :email ")
+    List<FeedBack> findFeedBackBySender(@Param("email")String email);
 
     @Query("SELECT f from FeedBack f order by f.id")
     List<FeedBack> fetchAll(Pageable pageable);
@@ -21,6 +21,6 @@ public interface FeedBackRepository extends JpaRepository<FeedBack, Long> {
     @Query(value = "select  count(f) from FeedBack f")
     long getTotalFeedBackCount();
 
-    @Query(value = "select  count(f) from FeedBack f where f.sender.id = :userId")
-    long getUserFeedBackCount(@Param("userId")UUID userId);
+    @Query(value = "select  count(f) from FeedBack f where f.sender.email = :email")
+    long getUserFeedBackCount(@Param("email")String email);
 }

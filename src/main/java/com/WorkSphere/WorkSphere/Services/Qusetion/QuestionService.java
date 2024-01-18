@@ -8,5 +8,5 @@ import java.util.UUID;
 
 public interface QuestionService {
     public void addQuestion(Question question);
-    public ResponseEntity<Object> getAllUserQuestions(UUID userId, long pageNumber);
+    public ResponseEntity<Object> getAllUserQuestions(String email, long pageNumber);
 }

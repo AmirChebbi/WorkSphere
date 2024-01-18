@@ -13,9 +13,9 @@ import java.util.UUID;
 @Repository
 public interface QuestionRepository extends JpaRepository<Question, Long> {
 
-    @Query("select q from Question q where q.userEntity.id = :userId order by q.id")
-    List<Question> fetchAllUserQuesions(@Param("userId")UUID userId, Pageable pageable);
+    @Query("select q from Question q where q.userEntity.email = :email order by q.id")
+    List<Question> fetchAllUserQuesions(@Param("email")String email, Pageable pageable);
 
-    @Query("select COUNT (q) from Question q where q.userEntity.id = :userId")
-    long getUserQuestionsNumber(@Param("userId")UUID userId);
+    @Query("select COUNT (q) from Question q where q.userEntity.email = :email")
+    long getUserQuestionsNumber(@Param("email")String email);
 }

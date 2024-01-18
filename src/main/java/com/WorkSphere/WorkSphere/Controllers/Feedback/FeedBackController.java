@@ -30,9 +30,9 @@ public class FeedBackController {
     public FeedBackDTO getFeedBackById(@PathVariable long id){
         return feedBackService.getFeedBackById(id);
     }
-    @GetMapping("/getBySender/{userId}")
-    public ResponseEntity<Object> getFeedBacksBySender(@PathVariable UUID userId, @RequestParam final long pageNumber){
-        return feedBackService.getFeedBacksBySender(userId, pageNumber);
+    @GetMapping("/getBySender")
+    public ResponseEntity<Object> getFeedBacksBySender(@RequestParam String email, @RequestParam final long pageNumber){
+        return feedBackService.getFeedBacksBySender(email, pageNumber);
     }
     @GetMapping("/getAll")
     public ResponseEntity<Object> getAllFeedBacks(@RequestParam long pageNumber){

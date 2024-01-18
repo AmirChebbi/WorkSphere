@@ -12,5 +12,6 @@ public interface AuthService {
     public ResponseEntity<Object>  login(@NotNull final LoginDTO loginDto);
     public ResponseEntity<Object> renewAccessToken(final String refreshToken, final String expiredToken);
     public String confirmToken(final String token);
+    public ResponseEntity<Object> test();
 
 }

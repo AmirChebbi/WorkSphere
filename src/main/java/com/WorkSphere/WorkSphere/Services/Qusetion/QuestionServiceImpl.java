@@ -30,13 +30,13 @@ public class QuestionServiceImpl implements QuestionService{
     }
 
     @Override
-    public ResponseEntity<Object> getAllUserQuestions(UUID userId, final long pageNumber) {
+    public ResponseEntity<Object> getAllUserQuestions(String email, final long pageNumber) {
         final Pageable pageable = (Pageable) PageRequest.of((int) pageNumber - 1, 10);
-        final List<QuestionDTO> userQuestions = questionRepository.fetchAllUserQuesions(userId,pageable).stream().map(questionDTOMapper).toList();
+        final List<QuestionDTO> userQuestions = questionRepository.fetchAllUserQuesions(email,pageable).stream().map(questionDTOMapper).toList();
         if(userQuestions.isEmpty() && pageNumber > 1)
         {
-            return getAllUserQuestions(userId,1);
+            return getAllUserQuestions(email,1);
         }
-        return ResponseHandler.generateResponse(userQuestions, HttpStatus.OK,userQuestions.size(),questionRepository.getUserQuestionsNumber(userId));
+        return ResponseHandler.generateResponse(userQuestions, HttpStatus.OK,userQuestions.size(),questionRepository.getUserQuestionsNumber(email));
     }
 }

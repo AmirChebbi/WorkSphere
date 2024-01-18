@@ -47,13 +47,13 @@ public class TaskServiceImpl implements TaskService{
     }
 
     @Override
-    public ResponseEntity<Object> getAllUserTasks(UUID userId, long pageNumber) {
+    public ResponseEntity<Object> getAllUserTasks(String email, long pageNumber) {
         final Pageable pageable = (Pageable) PageRequest.of((int) pageNumber -1, 10);
-        final List<TaskDTO> taskDTOS = taskRepository.findAllUserTasks(userId,pageable).stream().map(taskDTOMapper).toList();
+        final List<TaskDTO> taskDTOS = taskRepository.findAllUserTasks(email,pageable).stream().map(taskDTOMapper).toList();
         if (taskDTOS.isEmpty() && pageNumber < 1){
-            getAllUserTasks(userId, 1);
+            getAllUserTasks(email, 1);
         }
-        return ResponseHandler.generateResponse(taskDTOS,HttpStatus.OK, taskDTOS.size(), taskRepository.getAllUserTasksCount(userId));
+        return ResponseHandler.generateResponse(taskDTOS,HttpStatus.OK, taskDTOS.size(), taskRepository.getAllUserTasksCount(email));
     }
 
     @Override

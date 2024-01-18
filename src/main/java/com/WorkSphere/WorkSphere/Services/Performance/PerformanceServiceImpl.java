@@ -14,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class PerformanceServiceImpl implements PerformanceService {
@@ -28,9 +27,9 @@ public class PerformanceServiceImpl implements PerformanceService {
     }
 
     @Override
-    public PerformanceDTO getUserPerformance(UUID userId) {
-        calculateOverAllRating(userId);
-        return performanceDTOMapper.apply(performanceRepository.findByUserId(userId));
+    public PerformanceDTO getUserPerformance(String email) {
+        calculateOverAllRating(email);
+        return performanceDTOMapper.apply(performanceRepository.findByUserEmail(email));
     }
 
     @Override
@@ -38,19 +37,19 @@ public class PerformanceServiceImpl implements PerformanceService {
         final Pageable pageable = (Pageable) PageRequest.of((int) pageNumber -1, 10);
         List<Performance> performances = performanceRepository.findAllPaged(pageable);
         for (Performance performance : performances){
-            calculateOverAllRating(performance.getUserEntity().getId());
+            calculateOverAllRating(performance.getUserEntity().getEmail());
         }
         return ResponseHandler.generateResponse(performances.stream().map(performanceDTOMapper).toList(), HttpStatus.OK,performances.size(),performanceRepository.getPerformanceCount());
     }
 
-    public void calculateOverAllRating(UUID userId){
-        List<Submission> submissions = submissionRepository.getAllUserSubmissions(userId);
+    public void calculateOverAllRating(String email){
+        List<Submission> submissions = submissionRepository.getAllUserSubmissions(email);
         double total=0;
         for (Submission submission : submissions){
             total =+ submission.getRating();
         }
         double overAllPerformance = total/submissions.size();
-        Performance performance = performanceRepository.findByUserId(userId);
+        Performance performance = performanceRepository.findByUserEmail(email);
         performance.setOverallRating(overAllPerformance);
     }
 }

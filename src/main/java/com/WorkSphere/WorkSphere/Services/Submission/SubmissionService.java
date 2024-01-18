@@ -16,7 +16,7 @@ public interface SubmissionService {
 
     public ResponseEntity<Object> evaluateSubmission(long id, double note);
 
-    public ResponseEntity<Object> getSubmissionsByUser(UUID userId, long pageNumber);
+    public ResponseEntity<Object> getSubmissionsByUser(String email, long pageNumber);
 
 
 

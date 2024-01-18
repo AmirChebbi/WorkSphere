@@ -50,15 +50,15 @@ public class FeedBackServiceImpl implements FeedBackService{
     }
 
     @Override
-    public ResponseEntity<Object> getFeedBacksBySender(UUID userId, final long pageNumber) {
+    public ResponseEntity<Object> getFeedBacksBySender(String email, final long pageNumber) {
         final Pageable pageable = PageRequest.of((int)pageNumber - 1, 10 );
-        final List<FeedBackDTO> userFeedBacks = feedBackRepository.findFeedBackBySender(userId).stream().map(feedBackDTOMapper).toList();
+        final List<FeedBackDTO> userFeedBacks = feedBackRepository.findFeedBackBySender(email).stream().map(feedBackDTOMapper).toList();
 
         if(userFeedBacks.isEmpty() && pageNumber > 1)
         {
-            return getFeedBacksBySender(userId,1);
+            return getFeedBacksBySender(email,1);
         }
-        final long total = feedBackRepository.getUserFeedBackCount(userId);
+        final long total = feedBackRepository.getUserFeedBackCount(email);
         return ResponseHandler.generateResponse(userFeedBacks, HttpStatus.OK, userFeedBacks.size(),total);
     }
 

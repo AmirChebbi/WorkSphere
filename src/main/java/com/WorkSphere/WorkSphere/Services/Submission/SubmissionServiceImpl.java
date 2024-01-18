@@ -65,13 +65,13 @@ public class SubmissionServiceImpl implements SubmissionService{
     }
 
     @Override
-    public ResponseEntity<Object> getSubmissionsByUser(UUID userId, long pageNumber) {
+    public ResponseEntity<Object> getSubmissionsByUser(String email, long pageNumber) {
         int adjustedPageNumber = (int) Math.max(pageNumber,1);
         final Pageable pageable = (Pageable) PageRequest.of( adjustedPageNumber -1, 10);
-        final List<SubmissionDTO> submissionDTOS = submissionRepository.getSubmissionsByUserId(userId, pageable).stream().map(submissionDTOMapper).toList();
+        final List<SubmissionDTO> submissionDTOS = submissionRepository.getSubmissionsByUserId(email, pageable).stream().map(submissionDTOMapper).toList();
         if (submissionDTOS.isEmpty() && pageNumber<1){
-            getSubmissionsByUser(userId, 1);
+            getSubmissionsByUser(email, 1);
         }
-        return ResponseHandler.generateResponse(submissionDTOS, HttpStatus.OK, submissionDTOS.size(), submissionRepository.getNumberSubmissionsByUserId(userId));
+        return ResponseHandler.generateResponse(submissionDTOS, HttpStatus.OK, submissionDTOS.size(), submissionRepository.getNumberSubmissionsByUserId(email));
     }
 }

@@ -10,7 +10,7 @@ public interface FeedBackService {
     public ResponseEntity<Object> addFeedback(FeedBackDTO feedBack);
     public ResponseEntity<Object> deleteFeedBack(long id);
     public FeedBackDTO getFeedBackById(long id);
-    public ResponseEntity<Object> getFeedBacksBySender(UUID userId,final long pageNumber);
+    public ResponseEntity<Object> getFeedBacksBySender(String email,final long pageNumber);
     public ResponseEntity<Object> getAllFeedBacks(long pageNumber);
     public ResponseEntity<Object> updateFeedBack(long id, FeedBackDTO feedBackDTO);
 }

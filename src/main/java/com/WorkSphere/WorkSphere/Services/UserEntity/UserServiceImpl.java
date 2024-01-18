@@ -114,4 +114,5 @@ public class UserServiceImpl implements UserService{
                 .orElseThrow(() -> new ResourceNotFoundException(String.format("The user with email : %s could not be found.", userEmail)));
     }
 
+
 }

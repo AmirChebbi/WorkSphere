@@ -7,6 +7,7 @@ import com.WorkSphere.WorkSphere.DTOs.auth.RegisterDTO;
 import com.WorkSphere.WorkSphere.Services.auth.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -39,5 +40,9 @@ public class AuthController {
     public ResponseEntity<Object> renewAccessToken(@RequestParam("expiredToken") final String expiredToken, @PathVariable("refreshToken") final String refreshToken)
     {
         return authService.renewAccessToken(refreshToken,expiredToken);
+    }
+    @PostMapping("/test")
+    public ResponseEntity<Object> test() {
+        return authService.test();
     }
 }

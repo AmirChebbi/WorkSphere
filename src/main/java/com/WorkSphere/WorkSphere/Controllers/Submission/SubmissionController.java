@@ -33,8 +33,8 @@ public class SubmissionController {
         return submissionService.evaluateSubmission(id,note);
     }
 
-    @GetMapping("/getByUser/{userId}")
-    public ResponseEntity<Object> getSubmissionsByUser(@PathVariable UUID userId, @RequestParam long pageNumber){
-        return submissionService.getSubmissionsByUser(userId,pageNumber);
+    @GetMapping("/getByUser")
+    public ResponseEntity<Object> getSubmissionsByUser(@RequestParam String email, @RequestParam long pageNumber){
+        return submissionService.getSubmissionsByUser(email,pageNumber);
     }
 }

@@ -6,6 +6,6 @@ import org.springframework.http.ResponseEntity;
 import java.util.UUID;
 
 public interface PerformanceService {
-    public PerformanceDTO getUserPerformance(UUID userId);
+    public PerformanceDTO getUserPerformance(String email);
     public ResponseEntity<Object> getAll(long pageNumber);
 }

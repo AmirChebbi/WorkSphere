@@ -13,11 +13,11 @@ import java.util.UUID;
 @Repository
 public interface TaskRepository extends JpaRepository<Task, Long> {
 
-    @Query(value = "select t from Task t where t.doer.id = : userId")
-    List<Task> findAllUserTasks(@Param("userId") UUID userId, Pageable pageable);
+    @Query(value = "select t from Task t where t.doer.email = : email")
+    List<Task> findAllUserTasks(@Param("email") String email, Pageable pageable);
 
-    @Query(value = "SELECT count (t) from Task t where t.doer.id = :userId")
-    long getAllUserTasksCount(UUID userId);
+    @Query(value = "SELECT count (t) from Task t where t.doer.email = :email")
+    long getAllUserTasksCount(@Param("email") String email);
 
     @Query(value = "SELECT t from Task t where t.isSubmitted = false ")
     List<TaskDTO> findAllNonSubmittedTasks(Pageable pageable);

@@ -18,6 +18,8 @@ import com.WorkSphere.WorkSphere.Services.token.TokenService;
 import com.WorkSphere.WorkSphere.responses.ResponseHandler;
 import com.WorkSphere.WorkSphere.security.jwt.JWTService;
 import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -46,6 +48,7 @@ public class AuthServiceImpl  implements  AuthService{
     private final AuthenticationManager authenticationManager;
     private final JWTService jwtService;
 
+    @Autowired
     public AuthServiceImpl(UserService userEntityService, UserDTOMapper userEntityDTOMapper, RoleService roleService, PasswordEncoder passwordEncoder, ConfirmationTokenService confirmationTokenService, RefreshTokenService refreshTokenService, TokenService tokenService, EmailSenderService emailSenderService, AuthenticationManager authenticationManager, JWTService jwtService) {
         this.userEntityService = userEntityService;
         this.userEntityDTOMapper = userEntityDTOMapper;
@@ -207,4 +210,19 @@ public class AuthServiceImpl  implements  AuthService{
         });
         refreshTokenService.saveAll(validRefreshTokens);
     }
+
+    public ResponseEntity<Object> test(){
+        Role role = roleService.fetchRoleByName("EMPLOYEE");
+        userEntityService.saveUser(new UserEntity(
+                "Amir",
+                "Chebbi",
+                "amirchebbi54@gmail.com",
+                "28297603",
+                "AmirBond007",
+                new Date(),
+                role
+        ));
+        return ResponseHandler.generateResponse("User Saved successfully", HttpStatus.OK);
+    }
+
 }

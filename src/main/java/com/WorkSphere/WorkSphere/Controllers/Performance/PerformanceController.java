@@ -17,9 +17,9 @@ public class PerformanceController {
         this.performanceService = performanceService;
     }
 
-    @GetMapping("/getByUserId/{userId}")
-    public PerformanceDTO getUserPerformance(@PathVariable UUID userId){
-        return performanceService.getUserPerformance(userId);
+    @GetMapping("/getByUserEmail")
+    public PerformanceDTO getUserPerformance(@RequestParam String email){
+        return performanceService.getUserPerformance(email);
     }
     @GetMapping("/getAll")
     public ResponseEntity<Object> getAll(@RequestParam long pageNumber){
