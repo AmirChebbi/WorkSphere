@@ -76,7 +76,7 @@ public class ConfirmationTokenImpl  implements  ConfirmationTokenService{
                 "<body>\n" +
                 "<div class=\"container\">\n" +
                 "    <h1>Email Confirmed</h1>\n" +
-                "    <p>Your email address has been successfully confirmed. Thank you for joining us!</p>\n" +
+                "    <p>Your Email address has been successfully confirmed. Thank you for joining us!</p>\n" +
                 "    <button class=\"close-button\" onclick=\"window.close()\">Close</button>\n" +
                 "</div>\n" +
                 "</body>\n" +
@@ -133,7 +133,7 @@ public class ConfirmationTokenImpl  implements  ConfirmationTokenService{
                 "<body>\n" +
                 "  <div class=\"container\">\n" +
                 "    <h1>Email Already Confirmed</h1>\n" +
-                "    <p>Your email address has already been confirmed. Thank you for your continued support!</p>\n" +
+                "    <p>Your Email address has already been confirmed. Thank you for your continued support!</p>\n" +
                 "    <button class=\"close-button\" onclick=\"window.close()\">Close</button>\n" +
                 "  </div>\n" +
                 "</body>\n" +

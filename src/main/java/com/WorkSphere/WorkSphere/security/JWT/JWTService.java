@@ -1,8 +1,8 @@
-package com.WorkSphere.WorkSphere.security.jwt;
+package com.WorkSphere.WorkSphere.security.JWT;
 
 
 import com.WorkSphere.WorkSphere.DAOs.UserEntity.UserEntity;
-import com.WorkSphere.WorkSphere.security.utility.SecurityConstants;
+import com.WorkSphere.WorkSphere.security.Utility.SecurityConstants;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

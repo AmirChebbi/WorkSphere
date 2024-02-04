@@ -28,12 +28,12 @@ public interface UserRepository extends JpaRepository<UserEntity, UUID> {
     List<UserEntity> searchUsers(
             @Param("firstName") String firstName,
             @Param("lastName") String lastName,
-            @Param("email") String email,
+            @Param("Email") String email,
             @Param("phoneNumber") String phoneNumber
     );
 
     @Query(value = "select exists (select u from UserEntity u where u.email = :email) AS RESULT")
-    boolean isEmailRegistered(@Param("email")String email);
+    boolean isEmailRegistered(@Param("Email")String email);
 
     @Query(value = "select exists (select u from UserEntity u where u.phoneNumber = :phoneNumber) AS RESULT")
     boolean isPhoneNumberRegistered(@Param("phoneNumber")String phoneNumber);
@@ -42,4 +42,4 @@ public interface UserRepository extends JpaRepository<UserEntity, UUID> {
     Optional<UserEntity> fetchUserWithId(@Param("id") UUID id);
 
     @Query(value = "SELECT U FROM UserEntity U WHERE  U.email = :email ")
-    Optional<UserEntity> fetchUserWithEmail(@Param("email") String email);}
+    Optional<UserEntity> fetchUserWithEmail(@Param("Email") String email);}

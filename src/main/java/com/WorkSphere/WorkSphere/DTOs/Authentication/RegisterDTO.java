@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.DTOs.auth;
+package com.WorkSphere.WorkSphere.DTOs.Authentication;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -9,7 +9,7 @@ public class RegisterDTO {
     private String firstName;
     @Size(max = 20, message ="Invalid last name length. Please enter a name with a minimum of 5 characters and a maximum of 20 characters.")
     private String lastName;
-    @Pattern(regexp = "[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*$", message = "Invalid email address. Please enter a valid email.")
+    @Pattern(regexp = "[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*$", message = "Invalid Email address. Please enter a valid Email.")
     private String email;
     @NotBlank
     private String phoneNumber;

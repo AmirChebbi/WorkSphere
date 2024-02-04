@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.Services.auth;
+package com.WorkSphere.WorkSphere.Services.Authentication;
 
 
 import com.WorkSphere.WorkSphere.DAOs.Role.Role;
@@ -8,18 +8,17 @@ import com.WorkSphere.WorkSphere.DAOs.token.RefreshToken;
 import com.WorkSphere.WorkSphere.DAOs.token.Token;
 import com.WorkSphere.WorkSphere.DAOs.token.TokenType;
 import com.WorkSphere.WorkSphere.DTOs.UserEntity.UserDTOMapper;
-import com.WorkSphere.WorkSphere.DTOs.auth.*;
+import com.WorkSphere.WorkSphere.DTOs.Authentication.*;
 import com.WorkSphere.WorkSphere.Services.UserEntity.UserService;
-import com.WorkSphere.WorkSphere.Services.email.EmailSenderService;
+import com.WorkSphere.WorkSphere.Services.Email.EmailSenderService;
 import com.WorkSphere.WorkSphere.Services.role.RoleService;
 import com.WorkSphere.WorkSphere.Services.token.ConfirmationTokenService;
 import com.WorkSphere.WorkSphere.Services.token.RefreshTokenService;
 import com.WorkSphere.WorkSphere.Services.token.TokenService;
 import com.WorkSphere.WorkSphere.responses.ResponseHandler;
-import com.WorkSphere.WorkSphere.security.jwt.JWTService;
+import com.WorkSphere.WorkSphere.security.JWT.JWTService;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -65,7 +64,7 @@ public class AuthServiceImpl  implements  AuthService{
     @Override
     public ResponseEntity<Object> register(@NotNull final RegisterDTO registerDto) {
         if (userEntityService.isEmailRegistered(registerDto.getEmail())) {
-            throw new IllegalArgumentException("Sorry, that email is already taken. Please choose a different one.");
+            throw new IllegalArgumentException("Sorry, that Email is already taken. Please choose a different one.");
         }
 
         if (userEntityService.isPhoneNumberRegistered(registerDto.getPhoneNumber())) {
@@ -95,7 +94,7 @@ public class AuthServiceImpl  implements  AuthService{
         String confirmationToken = confirmationTokenService.generateConfirmationToken(savedUser);
         String refreshToken = refreshTokenService.generateRefreshToken(savedUser);
         String link = "http://localhost:8081/api/v1/auth/confirm?token=" + confirmationToken;
-        emailSenderService.sendEmail(savedUser.getEmail(),"Confirmation email" , emailSenderService.emailTemplateConfirmation(savedUser.getFirstName(),link));
+        emailSenderService.sendEmail(savedUser.getEmail(),"Confirmation Email" , emailSenderService.emailTemplateConfirmation(savedUser.getFirstName(),link));
 
         final RegisterResponseDTO registerResponse = RegisterResponseDTO
                 .builder()

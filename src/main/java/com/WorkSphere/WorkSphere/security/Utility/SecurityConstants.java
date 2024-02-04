@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.security.utility;
+package com.WorkSphere.WorkSphere.security.Utility;
 
 public class SecurityConstants {
 

@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.Services.email;
+package com.WorkSphere.WorkSphere.Services.Email;
 
 import jakarta.mail.internet.MimeMessage;
 import org.jetbrains.annotations.Contract;
@@ -52,7 +52,7 @@ public class EmailSenderServiceImpl  implements  EmailSenderService{
                 "            <a style=\"display: block; width: 150px; padding: 10px; text-align: center; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px; margin: 20px auto;\" href=" + link + ">Activate Account</a>\n" +
                 "            <p>If the button above doesn't work, you can also copy and paste the following link into your browser:</p>\n" +
                 "            <p>Activation link: " +link+"</p>"+
-                "            <p>If you did not sign up for this service, please ignore this email.</p>\n" +
+                "            <p>If you did not sign up for this service, please ignore this Email.</p>\n" +
                 "        </div>\n" +
                 "        <div style=\"text-align: center; padding-top: 20px;\">\n" +
                 "            <p>Best regards,<br>Ruspina</p>\n" +
@@ -74,7 +74,7 @@ public class EmailSenderServiceImpl  implements  EmailSenderService{
                 "            <blockquote style=\"background-color: #f0f0f0; padding: 10px; border-left: 5px solid #007bff;\">\n" +
                 "                  "+ message +"  \n" +
                 "            </blockquote>\n" +
-                "            <p>If you need to respond to this message, you can do so by replying to this email.</p>\n" +
+                "            <p>If you need to respond to this message, you can do so by replying to this Email.</p>\n" +
                 "        </div>\n" +
                 "        <div style=\"text-align: center; padding-top: 20px;\">\n" +
                 "            <p>Best regards,<br>Your Contact Page</p>\n" +

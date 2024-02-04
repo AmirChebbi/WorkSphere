@@ -32,7 +32,7 @@ public class Task {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "doer_email", referencedColumnName = "email")
+    @JoinColumn(name = "doer_email", referencedColumnName = "Email")
     private UserEntity doer;
 
     private Date submissionDeadline;

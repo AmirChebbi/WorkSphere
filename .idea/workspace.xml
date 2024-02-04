@@ -4,64 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e0c2a20-67f3-468a-b9e7-819a3cbc8ca7" name="Changes" comment="no big deal">
+    <list default="true" id="7e0c2a20-67f3-468a-b9e7-819a3cbc8ca7" name="Changes" comment="Done testing, it works just fine.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/Feedback/FeedBackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/Feedback/FeedBackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/Performance/PerformanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/Performance/PerformanceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/Qusetion/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/Qusetion/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/Submission/SubmissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/Submission/SubmissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/TasksController/TasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/TasksController/TasksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Controllers/auth/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/DAOs/UserEntity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/DAOs/UserEntity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/FeedBackRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/FeedBackRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/PerformanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/PerformanceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/QuestionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/SubmissionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/SubmissionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Repositories/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Feedback/FeedBackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Feedback/FeedBackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Feedback/FeedBackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Feedback/FeedBackServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Performance/PerformanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Performance/PerformanceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Performance/PerformanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Performance/PerformanceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Qusetion/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Qusetion/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Qusetion/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Qusetion/QuestionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Submission/SubmissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Submission/SubmissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Submission/SubmissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Submission/SubmissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Task/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Task/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Task/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/Task/TaskServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/UserEntity/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/UserEntity/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/auth/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/auth/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/auth/AuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/role/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/Services/role/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WorkSphere/WorkSphere/security/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/Feedback/FeedBackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/Feedback/FeedBackController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/Performance/PerformanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/Performance/PerformanceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/Qusetion/QuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/Qusetion/QuestionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/Submission/SubmissionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/Submission/SubmissionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/TasksController/TasksController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/TasksController/TasksController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/auth/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Controllers/auth/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/DAOs/UserEntity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/DAOs/UserEntity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Repositories/FeedBackRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Repositories/FeedBackRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Repositories/PerformanceRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Repositories/PerformanceRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Repositories/QuestionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Repositories/QuestionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Repositories/SubmissionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Repositories/SubmissionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Repositories/TaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Repositories/TaskRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Feedback/FeedBackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Feedback/FeedBackService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Feedback/FeedBackServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Feedback/FeedBackServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Performance/PerformanceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Performance/PerformanceService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Performance/PerformanceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Performance/PerformanceServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Qusetion/QuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Qusetion/QuestionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Qusetion/QuestionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Qusetion/QuestionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Submission/SubmissionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Submission/SubmissionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Submission/SubmissionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Submission/SubmissionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Task/TaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Task/TaskService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Task/TaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/Task/TaskServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/auth/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/auth/AuthService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/auth/AuthServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/auth/AuthServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/role/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/Services/role/RoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/security/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WorkSphere/WorkSphere/security/config/SecurityConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +64,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/lenovo/Desktop/Spring Projects/ecommerce-Backend-main",
+    "last_opened_file_path": "C:/Users/lenovo/Desktop/Spring Projects/PortfolioManagementSystem",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -240,6 +185,11 @@
       <workItem from="1705520909940" duration="1496000" />
       <workItem from="1705577717285" duration="1555000" />
       <workItem from="1705589041758" duration="13222000" />
+      <workItem from="1705609514948" duration="87000" />
+      <workItem from="1705614647327" duration="22000" />
+      <workItem from="1705658282451" duration="81000" />
+      <workItem from="1705934236712" duration="599000" />
+      <workItem from="1705942561132" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="fixed the filterchain">
       <created>1702803496417</created>
@@ -332,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705594930937</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Done testing, it works just fine.">
+      <created>1705609593663</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1705609593663</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,6 +303,7 @@
     <MESSAGE value="Decreased Work on the frontend" />
     <MESSAGE value="Forcing the saving of DTOs only with the extraction of the current User by his UserDetails on the active Session." />
     <MESSAGE value="no big deal" />
-    <option name="LAST_COMMIT_MESSAGE" value="no big deal" />
+    <MESSAGE value="Done testing, it works just fine." />
+    <option name="LAST_COMMIT_MESSAGE" value="Done testing, it works just fine." />
   </component>
 </project>

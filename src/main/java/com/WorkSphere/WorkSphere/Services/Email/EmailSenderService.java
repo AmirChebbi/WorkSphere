@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.Services.email;
+package com.WorkSphere.WorkSphere.Services.Email;
 
 public interface EmailSenderService {
     void sendEmail(final String toEmail , final String subject, String body);

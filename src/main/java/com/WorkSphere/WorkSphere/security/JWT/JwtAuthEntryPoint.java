@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.security.jwt;
+package com.WorkSphere.WorkSphere.security.JWT;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

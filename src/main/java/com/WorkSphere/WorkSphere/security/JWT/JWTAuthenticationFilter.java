@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.security.jwt;
+package com.WorkSphere.WorkSphere.security.JWT;
 
 
 import com.WorkSphere.WorkSphere.DAOs.UserEntity.UserEntity;
@@ -7,7 +7,7 @@ import com.WorkSphere.WorkSphere.Exceptions.InvalidTokenException;
 import com.WorkSphere.WorkSphere.Exceptions.ResourceNotFoundException;
 import com.WorkSphere.WorkSphere.Exceptions.RevokedTokenException;
 import com.WorkSphere.WorkSphere.Repositories.TokenRepository;
-import com.WorkSphere.WorkSphere.security.utility.CustomUserDetailsService;
+import com.WorkSphere.WorkSphere.security.Utility.CustomUserDetailsService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

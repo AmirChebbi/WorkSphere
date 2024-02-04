@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService{
         UserEntity currentUser = getUserEntityById(userId);
         currentUser.setEnabled(enabled);
         userRepository.save(currentUser);
-        final String successResponse = String.format("The user with email : %s  enabled = %s", currentUser.getEmail(),enabled? "true" :"false");
+        final String successResponse = String.format("The user with Email : %s  enabled = %s", currentUser.getEmail(),enabled? "true" :"false");
 
         return ResponseHandler.generateResponse(successResponse, HttpStatus.OK);
     }
@@ -111,7 +111,7 @@ public class UserServiceImpl implements UserService{
     public UserEntity getUserEntityByEmail(@NotNull final String userEmail)
     {
         return userRepository.fetchUserWithEmail(userEmail)
-                .orElseThrow(() -> new ResourceNotFoundException(String.format("The user with email : %s could not be found.", userEmail)));
+                .orElseThrow(() -> new ResourceNotFoundException(String.format("The user with Email : %s could not be found.", userEmail)));
     }
 
 

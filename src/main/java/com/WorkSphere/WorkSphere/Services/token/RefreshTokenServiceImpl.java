@@ -6,7 +6,7 @@ import com.WorkSphere.WorkSphere.DAOs.UserEntity.UserEntity;
 import com.WorkSphere.WorkSphere.DAOs.token.RefreshToken;
 import com.WorkSphere.WorkSphere.Exceptions.ResourceNotFoundException;
 import com.WorkSphere.WorkSphere.Repositories.RefreshTokenRepository;
-import com.WorkSphere.WorkSphere.security.utility.SecurityConstants;
+import com.WorkSphere.WorkSphere.security.Utility.SecurityConstants;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;

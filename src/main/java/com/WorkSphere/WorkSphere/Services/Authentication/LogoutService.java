@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.Services.auth;
+package com.WorkSphere.WorkSphere.Services.Authentication;
 
 
 import com.WorkSphere.WorkSphere.Repositories.TokenRepository;

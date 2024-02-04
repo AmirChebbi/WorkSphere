@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.DTOs.auth;
+package com.WorkSphere.WorkSphere.DTOs.Authentication;
 
 import lombok.Builder;
 import lombok.Data;

@@ -13,7 +13,7 @@ import java.util.UUID;
 @Repository
 public interface FeedBackRepository extends JpaRepository<FeedBack, Long> {
     @Query("SELECT f from FeedBack f where f.sender.email = :email ")
-    List<FeedBack> findFeedBackBySender(@Param("email")String email);
+    List<FeedBack> findFeedBackBySender(@Param("Email")String email);
 
     @Query("SELECT f from FeedBack f order by f.id")
     List<FeedBack> fetchAll(Pageable pageable);
@@ -22,5 +22,5 @@ public interface FeedBackRepository extends JpaRepository<FeedBack, Long> {
     long getTotalFeedBackCount();
 
     @Query(value = "select  count(f) from FeedBack f where f.sender.email = :email")
-    long getUserFeedBackCount(@Param("email")String email);
+    long getUserFeedBackCount(@Param("Email")String email);
 }

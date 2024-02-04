@@ -14,7 +14,7 @@ import java.util.List;
 @Repository
 public interface PerformanceRepository extends JpaRepository<Performance, Long> {
     @Query(value = "SELECT p from Performance p where p.userEntity.email = :email")
-    Performance findByUserEmail(@Param("email") String email);
+    Performance findByUserEmail(@Param("Email") String email);
 
     @Query(value = "select p from Performance p")
     List<Performance> findAllPaged(Pageable pageable);

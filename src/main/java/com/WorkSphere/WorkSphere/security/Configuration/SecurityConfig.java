@@ -1,20 +1,15 @@
-package com.WorkSphere.WorkSphere.security.config;
+package com.WorkSphere.WorkSphere.security.Configuration;
 
 
-import com.WorkSphere.WorkSphere.DAOs.Role.Role;
-import com.WorkSphere.WorkSphere.DAOs.UserEntity.UserEntity;
 import com.WorkSphere.WorkSphere.Services.UserEntity.UserService;
 import com.WorkSphere.WorkSphere.Services.role.RoleService;
-import com.WorkSphere.WorkSphere.responses.ResponseHandler;
-import com.WorkSphere.WorkSphere.security.jwt.JWTAuthenticationFilter;
-import com.WorkSphere.WorkSphere.security.jwt.JwtAuthEntryPoint;
+import com.WorkSphere.WorkSphere.security.JWT.JWTAuthenticationFilter;
+import com.WorkSphere.WorkSphere.security.JWT.JwtAuthEntryPoint;
 import jakarta.servlet.Filter;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -31,7 +26,6 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 @Configuration

@@ -12,9 +12,9 @@ import java.util.UUID;
 @Repository
 public interface SubmissionRepository extends JpaRepository<Submission, Long> {
     @Query(value = "SELECT s from Submission s where s.task.doer.email = :email")
-    List<Submission> getSubmissionsByUserId(@Param("email") String email, Pageable pageable);
+    List<Submission> getSubmissionsByUserId(@Param("Email") String email, Pageable pageable);
     @Query(value = "SELECT s from Submission s where s.task.doer.email = :email")
-    List<Submission> getAllUserSubmissions(@Param("email") String email);
+    List<Submission> getAllUserSubmissions(@Param("Email") String email);
     @Query(value = "SELECT count (s) from Submission s where s.task.doer.email = :email" )
-    long getNumberSubmissionsByUserId(@Param("email") String email);
+    long getNumberSubmissionsByUserId(@Param("Email") String email);
 }

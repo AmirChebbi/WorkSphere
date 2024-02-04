@@ -1,13 +1,12 @@
-package com.WorkSphere.WorkSphere.Controllers.auth;
+package com.WorkSphere.WorkSphere.Controllers.Authentication;
 
 
 
-import com.WorkSphere.WorkSphere.DTOs.auth.LoginDTO;
-import com.WorkSphere.WorkSphere.DTOs.auth.RegisterDTO;
-import com.WorkSphere.WorkSphere.Services.auth.AuthService;
+import com.WorkSphere.WorkSphere.DTOs.Authentication.LoginDTO;
+import com.WorkSphere.WorkSphere.DTOs.Authentication.RegisterDTO;
+import com.WorkSphere.WorkSphere.Services.Authentication.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

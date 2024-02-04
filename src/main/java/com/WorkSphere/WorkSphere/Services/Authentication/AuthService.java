@@ -1,9 +1,9 @@
-package com.WorkSphere.WorkSphere.Services.auth;
+package com.WorkSphere.WorkSphere.Services.Authentication;
 
 
 
-import com.WorkSphere.WorkSphere.DTOs.auth.LoginDTO;
-import com.WorkSphere.WorkSphere.DTOs.auth.RegisterDTO;
+import com.WorkSphere.WorkSphere.DTOs.Authentication.LoginDTO;
+import com.WorkSphere.WorkSphere.DTOs.Authentication.RegisterDTO;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.http.ResponseEntity;
 

@@ -4,7 +4,7 @@ package com.WorkSphere.WorkSphere.Services.token;
 import com.WorkSphere.WorkSphere.DAOs.token.Token;
 import com.WorkSphere.WorkSphere.Exceptions.ResourceNotFoundException;
 import com.WorkSphere.WorkSphere.Repositories.TokenRepository;
-import com.WorkSphere.WorkSphere.security.jwt.JWTService;
+import com.WorkSphere.WorkSphere.security.JWT.JWTService;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

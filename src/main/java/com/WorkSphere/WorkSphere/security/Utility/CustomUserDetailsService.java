@@ -1,4 +1,4 @@
-package com.WorkSphere.WorkSphere.security.utility;
+package com.WorkSphere.WorkSphere.security.Utility;
 
 
 import com.WorkSphere.WorkSphere.Exceptions.ResourceNotFoundException;
@@ -21,6 +21,6 @@ public class CustomUserDetailsService  implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        return userRepository.fetchUserWithEmail(email).orElseThrow(() -> new ResourceNotFoundException("The email address provided could not be found in our system."));
+        return userRepository.fetchUserWithEmail(email).orElseThrow(() -> new ResourceNotFoundException("The Email address provided could not be found in our system."));
     }
 }
